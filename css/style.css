@@ -43,6 +43,10 @@ ul{
     border-bottom: 1px solid #e7e9fc;
     box-shadow: 0 1px 6px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 2px 1px 0 rgba(46, 47, 66, 0.08);
 }
+.burger-icon {
+    display: none;
+    cursor: pointer;
+}
 .logo{
     font-family: "Raleway", sans-serif;
     font-weight: 700;
@@ -397,7 +401,10 @@ li.portfolio-item{
     position: relative;
     overflow: hidden;
 }
-
+.port-item-img{
+    width: 360px;
+    height: 300px;
+}
 .port-item img {
     object-fit: cover;
     display: block;
@@ -500,6 +507,9 @@ footer .contacts-info-link:focus {
 .container-footer{
     display: flex;
     align-items: baseline
+}
+.container-double{
+    display: flex;
 }
 .container-footer-logo{
     margin-right: 120px;
@@ -624,7 +634,7 @@ footer .contacts-info-link:focus {
     padding: 72px 24px 24px 24px;
 }
 
-.modal-btn-close{
+.modal-btn-close, .nav-btn-close {
     position: absolute;
     top: 24px;
     right: 24px;
@@ -642,16 +652,20 @@ footer .contacts-info-link:focus {
 }
 
 .modal-btn-close:focus,
-.modal-btn-close:hover {
+.modal-btn-close:hover,
+.nav-btn-close:focus,
+.nav-btn-close:hover {
     background-color: #404bbf;
     border: none;
 } 
-.modal-btn-close-svg{
+.modal-btn-close-svg, .nav-btn-close-svg {
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-btn-close:hover .modal-btn-close-svg,
-.modal-btn-close:focus .modal-btn-close-svg {
+.modal-btn-close:focus .modal-btn-close-svg,
+.nav-btn-close:hover .nav-btn-close-svg,
+.nav-btn-close:focus .modal-btn-close-svg {
     fill: #ffffff;
 }
 .modal-title{
@@ -661,6 +675,8 @@ footer .contacts-info-link:focus {
     letter-spacing: 0.02em;
     text-align: center;
     color: #2e2f42;
+    margin-bottom: 16px;
+    margin-top: 0;
 }
 .modal-form-container{
     margin-bottom: 8px;
@@ -781,4 +797,310 @@ footer .contacts-info-link:focus {
 .modal-form-btn-send:hover,
 .modal-form-btn-send:focus{
     background-color: #404bbf;
+}
+
+                  .mobile-nav-menu {
+                      display: none;
+                      flex-direction: column;
+                      position: fixed;
+                      top: 0;
+                      left: 0;
+                      bottom: 0;
+                      background-color: white;
+                      width: 100%;
+                      padding: 72px 16px 40px 16px;
+                      z-index: 10;
+                  }
+
+                  .button-nav {
+                    display: none;
+                  }
+@media screen and (max-width: 767px){
+    .menu-nav,
+    .box-address {
+        display: none;
+    }
+    .logo{
+        padding: 16px 0;
+    }
+
+    .button-nav {
+        display: block;
+            border: 0;
+                background: none;
+    }
+
+    .nav-btn-close {
+            position: absolute;
+                right: 24px;
+                top: 24px;
+    }
+
+    .menu-list {
+ 
+            display: flex;
+            gap: 40px;
+            flex-direction: column;
+    }
+
+        .menu-list a {
+    font-weight: 700;
+        font-size: 36px;
+        line-height: 1.11111;
+        letter-spacing: 0.02em;
+        color: #2e2f42;
+        }
+    .menu-list a:hover,
+        .menu-list a:focus {
+        color: #404bbf;
+    }
+        .box-header-nav {
+            width: 100%;
+            justify-content: space-between;
+        }
+          .burger-icon {
+              display: block;
+          }
+
+    
+          .mobile-box-address .mail-tel {
+            font-weight: 500;
+                font-size: 20px;
+                line-height: 1.2;
+                letter-spacing: 0.02em;
+                color: #434455;
+                font-style: normal;
+          }
+
+          .mobile-address-and-contacts {
+            display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 48px;
+          }
+
+          .mobile-list-address {
+    display: flex;
+        flex-direction: column;
+        gap: 24px;
+          }
+
+                  .mobile-address-and-contacts .footer-contacts-info-list {
+gap: 40px;
+justify-content: space-between;
+    align-items: center;
+    align-self: center;
+                  }
+            .mobile-box-address .mail-tel:hover,
+            .mobile-box-address .mail-tel:focus  {
+                color: #4d5ae5;
+            }
+
+        .mobile-nav-menu.is-open {
+              display: flex;
+            justify-content: space-between;
+          }
+    .studio{
+        padding: 72px 52px;
+    }
+    .container-main-studio{
+        gap: 72px;
+    }
+    .h-one{
+        font-weight: 700;
+        font-size: 36px;        
+        line-height: 1.1;
+    }
+    .portfolio{
+        padding: 96px 0;
+    }
+    .container-main-portfolio{
+        max-width: 288px;
+    }
+    .portfolio-h-three{
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 1.1;
+        letter-spacing: 0.02em;
+        text-align: center;
+    }
+    .portfolio-h-three-info{
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 1.5;
+        letter-spacing: 0.02em;
+    }
+    .portfolio-icon-section{
+    display: none;
+    }
+    .portfolio-list{
+        gap: 72px;
+        flex-direction: column;
+    }
+    li.portfolio-item{
+        width: auto;
+    }
+    .contacts{
+        padding: 96px 0;
+    }
+    .container-main-contacts {
+        align-items: center;
+    }
+    .contacts-list {
+        flex-wrap: wrap;
+        max-width: 264px;
+        gap: 72px;
+    }
+    .container-main-ourportfolio {
+        align-items: center;
+    }
+    .port{
+        padding: 96px 0;
+    }
+    .port-list{
+        max-width: 288px;
+        gap: 48px;
+    }
+    .port-item-img {
+        width: 288px;
+        height: 280px;
+
+    }
+    .box-footer{
+        padding: 96px 0;
+    }
+    .container-footer {
+        align-items: center;
+        gap: 72px;
+        flex-direction: column;
+        text-align: center;
+    }
+    .container-footer-social,
+    .container-footer-logo {
+        margin: 0;
+    }
+    .container-double {
+        gap: 72px;
+        flex-direction: column;
+    }
+    .logo-link{
+        margin-right: 0;
+    }
+    .info-footer{
+        text-align: left;
+        width: 100%;
+    }
+    .footer-form-container{
+        width: 100%;
+    }
+    .footer-form{
+        flex-direction: column;
+        gap: 16px;
+    }
+    .footer-form-inpt{
+        width: 100%;
+    }
+    .footer-form-btn{
+        align-self: center;
+    }
+    .modal-container{
+        max-width: 288px;
+        padding: 72px 16px 24px 16px;
+    }
+
+
+}
+@media screen and (min-width: 768px) and (max-width: 1157px){
+    .logo{
+        margin-right: 120px;
+    }
+    .box-address ul {
+        font-style: normal;
+        display: flex;
+        margin: 0;
+        gap: 12px;
+        flex-direction: column;
+    }
+
+    .mail-tel {
+        font-size: 12px;
+        line-height: 14px;
+        letter-spacing: 0.04em;
+    }
+    
+    .studio {
+        padding-top: 112px;
+        padding-bottom: 112px;
+    }
+
+    .container-main-studio {
+        gap: 36px;
+    }
+    .portfolio{
+        padding: 96px 0;
+    }
+    
+    .portfolio-icon-section {
+            display: none;
+        }
+    .portfolio-list{
+        flex-wrap: wrap;
+        gap: 72px 24px;
+    }
+    li.portfolio-item {
+        width: calc((100% - 24px) / 2);
+        
+    }
+    .portfolio-h-three{
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 1.1;
+        letter-spacing: 0.02em
+    }
+    .portfolio-h-three-info{
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 1.5;
+        letter-spacing: 0.02em;
+    }
+    .contacts{
+        padding: 96px 0;
+    }
+    .container-main-contacts {
+        align-items: center;}
+    .contacts-list{
+        flex-wrap: wrap;
+        max-width: 552px;
+        gap: 64px 24px;
+    }
+    .container-main-ourportfolio {
+        align-items: center;
+    }
+    .port{
+        padding: 96px 0;
+    }
+    .port-list {
+        max-width: 736px;
+        gap: 72px 24px;
+    }
+    .port-item-img {
+        max-width: 356px;
+    }
+    .container-double {
+        gap: 24px;
+    }
+    .box-footer{
+        padding: 96px 0;
+    }
+    .container-footer {
+        align-items: flex-start;       
+        gap: 72px;
+        flex-direction: column;
+        margin-left: 108px;
+        padding: 0;
+    }
+    .container-footer-social,
+    .container-footer-logo {
+        margin: 0;
+    }
 }
