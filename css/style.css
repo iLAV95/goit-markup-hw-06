@@ -159,7 +159,6 @@ a.list-header:focus {
     max-width: 1440px;
     margin: auto;
     padding: 72px 52px;
-    padding: 188px 0;
     background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
         url("../images/peopleoffice.jpg");
     background-repeat: no-repeat;
@@ -480,8 +479,8 @@ li.portfolio-item {
     position: absolute;
     top: 0;
     left: 0;
-    width: 360px;
-    height: 300px;
+    width: 288px;
+    height: 280px;
     background-color: #4D5AE5;
     color: #f4f4fd;
     display: flex;
@@ -688,7 +687,7 @@ footer .contacts-info-link:focus {
     transform: translate(-50%, -50%);
     top: 50%;
     left: 50%;
-    max-width: 288px;
+    width: 288px;
     min-height: 584px;
     background: #fcfcfc;
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -905,6 +904,14 @@ footer .contacts-info-link:focus {
 }
 
 @media screen and (max-width: 767px) {
+    .studio {
+            background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url("../images/people-office-mob.jpg");
+        }
+    @media (min-resolution: 192dpi){
+        .studio{
+            background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url("../images/people-office-mob@x2.jpg");
+        }
+    }
 
     .menu-nav,
     .box-address {
@@ -1147,8 +1154,16 @@ footer .contacts-info-link:focus {
         line-height: 14px;
         letter-spacing: 0.04em;
     }
+    
+
+    @media (min-resolution: 192dpi) {
+        .studio {
+            background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url("../images/people-office-tab@x2.jpg");
+        }
+    }
 
     .studio {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url("../images/people-office-tab.jpg");
         padding-top: 112px;
         padding-bottom: 112px;
     }
@@ -1243,12 +1258,24 @@ footer .contacts-info-link:focus {
     .footer-form-inpt{
         min-width: 264px;
     }
+
+    .modal-container {
+        width: 408px;
+        padding: 72px 24px 24px 24px;
+    }
 }
 @media screen and (min-width: 1158px){
     .logo{
         padding: 24px 0;
     }
+    @media (min-resolution: 192dpi) {
+        .studio {
+            background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url("../images/people-office-desk@x2.jpg");
+        }
+    }
+          
     .studio {
+        
         padding: 188px 0;
     }
     .container-main-studio {
@@ -1309,7 +1336,7 @@ footer .contacts-info-link:focus {
         gap: 48px 24px;
     }
 
-    .port-item-img {
+    .port-item-img, .port-hover-text {
         width: 360px;
         height: 300px;
 
@@ -1342,8 +1369,5 @@ footer .contacts-info-link:focus {
         width: 408px;
         padding: 72px 24px 24px 24px;
     }
-    
-    
-
 
 }
